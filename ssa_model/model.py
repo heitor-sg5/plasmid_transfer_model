@@ -36,8 +36,8 @@ def gillespie_ssa(p, TMAX, y0):
             wP * P,                     # P birth
             p['mu'] * F,                # F death
             p['mu'] * P,                # P death
-            p['delta'] * P,             # plasmid loss (P -> F)
-            p['beta'] * F * P / p['K']  # conjugation (F -> P)
+            p['delta'] * P,             # plasmid loss
+            p['beta'] * F * P / p['K']  # conjugation
         ])
 
         a0 = a.sum()
