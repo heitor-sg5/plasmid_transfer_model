@@ -1,4 +1,4 @@
-# Plasmid Transfer Dynamics Models
+# Plasmid Dynamics Models
 
 ## Overview
 
