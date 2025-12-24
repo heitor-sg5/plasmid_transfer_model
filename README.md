@@ -159,7 +159,7 @@ As $s→r$, the existence condition for the plasmid-free equilibrium $μ<r(1−s
 
 ### Stochastic Effects and SSA Outcomes
 
-Stochastic simulations broadly reproduce the qualitative behaviour of the deterministic model but reveal important deviations near extinction boundaries. At $s=0$, most SSA realisations lead to plasmid extinction (98%), consistent with the ODE prediction. However, a small fraction of runs show transient plasmid persistence at very low population sizes ($0.0007±0.0049$), reflecting demographic noise and rare-event survival that cannot occur in the deterministic framework. 
+Stochastic simulations broadly reproduce the qualitative behaviour of the deterministic model but reveal important deviations near extinction boundaries. At $s=0$, most SSA realisations lead to plasmid extinction (98%), consistent with the ODE prediction. However, a small fraction of runs show transient plasmid persistence at very low population sizes ($0.0007±0.0049$), reflecting demographic noise and rare-event survival that cannot occur in the deterministic model. 
 
 At $s=0.2$, the majority of stochastic realisations closely match the ODE dynamics: plasmids successfully invade, increase in frequency, and become the dominant population ($0.5513±0.0368$ versus $0.3376±0.0340$). No plasmid extinctions were observed under these conditions. 
 
