@@ -12,11 +12,13 @@ def main():
         start_time = time.time()
         p = ode_model.base_params.copy()
         beta_crit = ode_model.get_beta_crit(p)
-        s_crit = ode_model.get_s_crit(p)
+        beta_cost = ode_model.get_beta_cost(p)
+        beta_delta = ode_model.get_beta_delta(p)
 
         print("\nAnalytical thresholds (base parameters):")
         print(f"Critical β = {beta_crit:.4f}")
-        print(f"Critical s = {s_crit:.4f}\n")
+        print(f"Critical β / c = {beta_cost:.4f}")
+        print(f"Critical β / δ = {beta_delta:.4f}")
 
         ts_results = ode_model.run_time_series()
         print(f"Time series simulation completed in {time.time() - start_time:.2f} seconds.\n")

@@ -34,13 +34,19 @@ def ode_model(t, y, p):
 
 def get_beta_crit(p):
     num = p['delta'] + p['mu'] * (p['c'] / (1 - p['s']))
-    denom = 1 - (p['mu'] / (p['r'] * (1 - p['s'])))
+    denom = p['K'] * (1 - (p['mu'] / (p['r'] * (1 - p['s']))))
     return num / denom
 
-def get_s_crit(p):
-    num = p['mu'] * (((p['beta'] * p['K']) / p['r']) + p['c'])
-    denom = (p['beta'] * p['K']) - p['delta']
-    return num / denom if denom != 0 else 0
+def get_beta_cost(p):
+    term1 = 1 / p['K']
+    term2 = p['delta'] / (p['c'] * (1 - (p['mu'] / (p['r'] * (1 - p['s'])))))
+    term3 = p['mu'] / ((1 - p['s'] * (1 - (p['mu'] / (p['r'] * (1 - p['s']))))))
+    return term1 * (term2 + term3)
+
+def get_beta_delta(p):
+    term1 = 1 / (p['K'] * (1 - p['mu'] / (p['r'] * (1 - p['s']))))
+    term2 = 1 + ((p['mu'] + p['c']) / (p['delta'] * (1 - p['s'])))
+    return term1 * term2
 
 def run_time_series(s_values=[0.0, 0.2, 0.6]):
     results = {}
