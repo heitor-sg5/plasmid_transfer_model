@@ -33,10 +33,12 @@ Plasmid invasion dynamics were studied using two modelling methods: a determinis
 ```
 ├── main.py
 ├── ode_model/
+│   ├── __init__.py
 │   ├── model.py
 │   ├── charts.py
 │   └── figures/
 ├── ssa_model/
+│   ├── __init__.py
 │   ├── model.py
 │   ├── charts.py
 │   └── figures/
